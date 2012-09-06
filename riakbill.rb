@@ -34,7 +34,8 @@ class Riakbill < Thor
     all_reports.each_with_index do |reports, index|
       puts "#{index}: #{URI.unescape(URI.unescape(reports))}"
       begin
-        puts "  in_progress? => #{client.get_object(backet_name, reports).data["in_progress"]}"
+        data = client.get_object(backet_name, reports).data
+        puts ["  in_progress? => ", data["in_progress"], ",  has_report? => ", data.has_key?("report")].join
       rescue Riak::HTTPFailedRequest => e
         # puts e.message
         puts "  Report Not Found."

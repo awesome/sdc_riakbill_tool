@@ -6,6 +6,9 @@ health checker for our sdc billingapi.
 ## Tested sdc
 * 6.5.3
 
+## install
+`bundle install --path=vendor/bundle --without development smatos`
+
 ## riakbill.rb 
 <pre><code># ./riakbill.rb 
 Tasks:

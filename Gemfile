@@ -3,6 +3,12 @@ source "https://rubygems.org"
 
 gem "riak-client"
 gem 'thor'
-gem "pry"
-gem 'pry-doc'
-gem 'rb-readline'
+
+group :development do
+  gem "pry"
+  gem 'pry-doc'
+end
+
+group :smartos do
+  gem 'rb-readline'
+end

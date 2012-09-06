@@ -94,7 +94,7 @@ Riakbill.start
 __END__
 {
   "riak": {
-    "host": "10.99.99.17",
+    "host": "set_ip_address",
     "http_port": 8098
   }
 }
